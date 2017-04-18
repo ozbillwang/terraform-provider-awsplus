@@ -2,7 +2,11 @@ name = terraform-provider-awsplus
 package = github.com/bwits/$(name)
 
 .PHONY: release
-release:
+
+get-deps:
+	go get -v github.com/bwits/$(name)
+
+release: get-deps
 	mkdir -p release
 	GOOS=linux GOARCH=amd64 go build -o release/$(name)-linux-amd64 $(package)
 	GOOS=linux GOARCH=386 go build -o release/$(name)-linux-386 $(package)
