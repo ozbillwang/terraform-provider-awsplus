@@ -1,6 +1,8 @@
 ### terraform-provider-awsplus
 ======================
 
+[![Build Status](https://travis-ci.org/BWITS/terraform-provider-awsplus.svg?branch=master)](https://travis-ci.org/BWITS/terraform-provider-awsplus)
+
 Missing feature in terraform aws provider. 
 
 #### awsplus_vpc_peering_accept_all
