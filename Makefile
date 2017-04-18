@@ -18,6 +18,5 @@ release: get-deps
 plan: get-deps release
 	{ \
 	cp .terraformrc $(HOME)/.terraformrc ;\
-        cd $(TRAVIS_BUILD_DIR) ;\
-	terraform plan ;\
+	$(TERRAFORM_CMD) plan ;\
 	}

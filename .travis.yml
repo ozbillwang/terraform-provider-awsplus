@@ -9,9 +9,9 @@ go:
   - 1.8
   - master
 
-before_install:
-  - wget https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_linux_amd64.zip -O /tmp/terraform.zip
-  - sudo unzip -d /usr/local/bin/ /tmp/terraform.zip
+#before_install:
+#  - wget https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_linux_amd64.zip -O /tmp/terraform.zip
+#  - sudo unzip -d /usr/local/bin/ /tmp/terraform.zip
 
 install:
   - make get-deps
