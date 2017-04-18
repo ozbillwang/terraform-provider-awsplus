@@ -17,7 +17,6 @@ release: get-deps
 
 plan: release
 	{ \
-	GOOS=linux GOARCH=amd64 go build -o $(HOME)/release/$(name)-linux-amd64 $(package) ;\
 	cp .terraformrc $(HOME)/.terraformrc ;\
-	$(TERRAFORM_CMD) plan ;\
+	terraform plan ;\
 	}
