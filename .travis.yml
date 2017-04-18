@@ -9,8 +9,16 @@ go:
   - 1.8
   - master
 
+before_install:
+  - wget https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_linux_amd64.zip -O /tmp/terraform.zip
+  - sudo unzip -d /usr/local/bin/ /tmp/terraform.zip
+
 install:
   - make get-deps
 
 script:
   - make plan
+
+notifications:
+  slack:
+    secure: Y2w9DQGUdkrdVlc8Fsm+W6w48h+KciuJnVyMfNwfeG2yXWyxUURJC8k8HNK5AfRF+2GGgJvS61zWB+Nukf84FYQW3ZSpIa22R/jHYMIaqrFpKRR7cIabUBZ8vgQFMOBmvwbeLxPjM2pCwvvmY+f2D+9SG+rBlKqS/oRjz9xtF9m/XTb2EAatMDYkIKF+Yz3r+qXuKLs0JOaYhEqZImUmdrTCcPYLTEPg21dNvATLuorGCAdecpXJocbiUbHCk3mGnLnJ7ijkHPmD49n1c8Wc1G8Oq5VO2CG+kE7MS5sdX1gYOgum8pHcWUWo6WfD4UY5VBBcPJHDZlJAYkIsoCzvEyNglVShzHDrA0m6UttsoiG4tiSFialOaPqtG21s34RrLCg0fPo/f1GW7wfKo5+SxZWKwMU0kSDJx4jwga6ypxAjmqai6jFELe8OH/E7ssnoHVd0aO3eu0drMpWI3Z7dptDW4CGRPRqWN+654g9sr+BxyVv8s9bliWHwreYdgrtLKHAPcJXIjJwGu232jkG76bSbghuPV7XA25f0OSkD13fIWswBdRLQE95U3OBypiFg/XzvUAjdE2ju5RFPbZCbqm/MePa+lhQ0xgleTpqeg0UdRpZNMeKQpVqkjQkhYJloBUKHeMAIu0bICzueK2LP4M+5yE/2J997nURtYN33o3U=
