@@ -1,7 +1,7 @@
 name = terraform-provider-awsplus
 package = github.com/bwits/$(name)
 TERRAFORM_IMAGE = hashicorp/terraform:0.9.1
-TERRAFORM_CMD = docker run --rm -w /app -v $($TRAVIS_BUILD_DIR):/app -v $(HOME):/root $(TERRAFORM_IMAGE)
+TERRAFORM_CMD = docker run --rm -w /app -v $(TRAVIS_BUILD_DIR):/app -v $(HOME):/root $(TERRAFORM_IMAGE)
 
 .PHONY: release
 
