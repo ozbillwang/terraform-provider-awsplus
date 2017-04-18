@@ -13,5 +13,4 @@ install:
   - make get-deps
 
 script:
-  - make release
   - make plan
