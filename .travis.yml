@@ -14,7 +14,8 @@ install:
   - make get-deps
 
 script:
-  - if [[ $(terraform fmt | wc -c) -ne 0 ]]; then echo "terraform files need be formatted"; exit 1; fi
+  - make fmt
+  - make test
   - make plan
 
 notifications:
